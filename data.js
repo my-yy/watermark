@@ -1,0 +1,217 @@
+const data_list = [{
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_2050-164332-0017.wav",
+    "wmd": "demo_outputs/LibriSpeech_2050-164332-0017_wmd_snr39.21+pesq4.40.wav",
+    "pesq": 4.397879600524902,
+    "snr": 39.20541787404983
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_8356-240982-0036.wav",
+    "wmd": "demo_outputs/LibriSpeech_8356-240982-0036_wmd_snr43.82+pesq4.33.wav",
+    "pesq": 4.33311653137207,
+    "snr": 43.822584766904995
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_2262-141716-0001.wav",
+    "wmd": "demo_outputs/LibriSpeech_2262-141716-0001_wmd_snr31.89+pesq4.22.wav",
+    "pesq": 4.220511436462402,
+    "snr": 31.886384469454015
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_1756-134819-0061.wav",
+    "wmd": "demo_outputs/LibriSpeech_1756-134819-0061_wmd_snr39.71+pesq4.11.wav",
+    "pesq": 4.114340305328369,
+    "snr": 39.71041194972661
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_1914-121449-0026.wav",
+    "wmd": "demo_outputs/LibriSpeech_1914-121449-0026_wmd_snr35.79+pesq4.34.wav",
+    "pesq": 4.338589191436768,
+    "snr": 35.78746955044592
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_1079-128631-0024.wav",
+    "wmd": "demo_outputs/LibriSpeech_1079-128631-0024_wmd_snr37.39+pesq4.34.wav",
+    "pesq": 4.338930130004883,
+    "snr": 37.394004643282614
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_597-134789-0003.wav",
+    "wmd": "demo_outputs/LibriSpeech_597-134789-0003_wmd_snr41.87+pesq4.36.wav",
+    "pesq": 4.363048076629639,
+    "snr": 41.866896036369766
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_2074-159371-0019.wav",
+    "wmd": "demo_outputs/LibriSpeech_2074-159371-0019_wmd_snr38.83+pesq4.24.wav",
+    "pesq": 4.2431721687316895,
+    "snr": 38.83444924923016
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_7982-110054-0050.wav",
+    "wmd": "demo_outputs/LibriSpeech_7982-110054-0050_wmd_snr39.70+pesq4.24.wav",
+    "pesq": 4.23570442199707,
+    "snr": 39.70082763119955
+}, {
+    "dataset": "LibriSpeech",
+    "origin": "demo_outputs/LibriSpeech_1760-143006-0068.wav",
+    "wmd": "demo_outputs/LibriSpeech_1760-143006-0068_wmd_snr34.64+pesq4.35.wav",
+    "pesq": 4.352295398712158,
+    "snr": 34.64230582571935
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_d998dd2f4918c906726e63665f24814eb3410dbbaa71c6f69934a54c939495a9cd09f7fea7e72c7e0e590552fb50c6ed6931672ddb8e30c3d324b559b50259d5.wav",
+    "wmd": "demo_outputs/CommonVoice_d998dd2f4918c906726e63665f24814eb3410dbbaa71c6f69934a54c939495a9cd09f7fea7e72c7e0e590552fb50c6ed6931672ddb8e30c3d324b559b50259d5_wmd_snr37.39+pesq4.12.wav",
+    "pesq": 4.122880458831787,
+    "snr": 37.39450931549072
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_a243da2b7d64476357725efc1884268a5501a97fe0f396e9fdc1d9b5dec2d758052c92ef9f15b08f16b3a9439f58226ef01d3e87b7577ec8767aae449251dd4f.wav",
+    "wmd": "demo_outputs/CommonVoice_a243da2b7d64476357725efc1884268a5501a97fe0f396e9fdc1d9b5dec2d758052c92ef9f15b08f16b3a9439f58226ef01d3e87b7577ec8767aae449251dd4f_wmd_snr42.64+pesq4.37.wav",
+    "pesq": 4.371784210205078,
+    "snr": 42.64108180999756
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_ja_21788021.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_ja_21788021_wmd_snr42.73+pesq4.35.wav",
+    "pesq": 4.354685306549072,
+    "snr": 42.730960845947266
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_ru_26124854.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_ru_26124854_wmd_snr10.92+pesq2.90.wav",
+    "pesq": 2.8990719318389893,
+    "snr": 10.919196605682373
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_ja_24862267.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_ja_24862267_wmd_snr44.69+pesq4.29.wav",
+    "pesq": 4.287561416625977,
+    "snr": 44.688100814819336
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_b26a9a4f6acec2d4438e6789abd35034763fb34a39b085e9f0cc88b13f97e711eee2bab521ef6317c90e2f4bae961b0e61c6ccb4e33aa90ec5b7047bc0b3cff3.wav",
+    "wmd": "demo_outputs/CommonVoice_b26a9a4f6acec2d4438e6789abd35034763fb34a39b085e9f0cc88b13f97e711eee2bab521ef6317c90e2f4bae961b0e61c6ccb4e33aa90ec5b7047bc0b3cff3_wmd_snr23.64+pesq3.31.wav",
+    "pesq": 3.3084945678710938,
+    "snr": 23.639931678771973
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_5a37e07c37e97c7728e258a6fc169d3cc93e4ef7ae2e7d3fcfa704e639a99d8d12182ae6cb1c56c115e0172cef18d26b58e235f33fdbb45595b8d00a4e8d6975.wav",
+    "wmd": "demo_outputs/CommonVoice_5a37e07c37e97c7728e258a6fc169d3cc93e4ef7ae2e7d3fcfa704e639a99d8d12182ae6cb1c56c115e0172cef18d26b58e235f33fdbb45595b8d00a4e8d6975_wmd_snr42.13+pesq4.40.wav",
+    "pesq": 4.3985981941223145,
+    "snr": 42.12849140167236
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_zh-CN_18999819.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_zh-CN_18999819_wmd_snr41.40+pesq4.47.wav",
+    "pesq": 4.474081993103027,
+    "snr": 41.40303611755371
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_ru_27263530.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_ru_27263530_wmd_snr38.78+pesq4.43.wav",
+    "pesq": 4.43311882019043,
+    "snr": 38.7794303894043
+}, {
+    "dataset": "CommonVoice",
+    "origin": "demo_outputs/CommonVoice_common_voice_es_19705965.wav",
+    "wmd": "demo_outputs/CommonVoice_common_voice_es_19705965_wmd_snr41.77+pesq4.42.wav",
+    "pesq": 4.417307376861572,
+    "snr": 41.77444934844971
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_ar5lxuKk164.wav",
+    "wmd": "demo_outputs/AudioSet_ar5lxuKk164_wmd_snr46.35+pesq4.23.wav",
+    "pesq": 4.2262396812438965,
+    "snr": 46.35269244387202
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_g3GyXFGShVs.wav",
+    "wmd": "demo_outputs/AudioSet_g3GyXFGShVs_wmd_snr36.18+pesq4.49.wav",
+    "pesq": 4.492585182189941,
+    "snr": 36.183662319185515
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_3iULBImNPiI.wav",
+    "wmd": "demo_outputs/AudioSet_3iULBImNPiI_wmd_snr36.15+pesq4.48.wav",
+    "pesq": 4.4816389083862305,
+    "snr": 36.151872672669725
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_SO48lEIWoIk.wav",
+    "wmd": "demo_outputs/AudioSet_SO48lEIWoIk_wmd_snr31.80+pesq4.21.wav",
+    "pesq": 4.211726188659668,
+    "snr": 31.79710668380221
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_1TFaLv7dQQs.wav",
+    "wmd": "demo_outputs/AudioSet_1TFaLv7dQQs_wmd_snr39.48+pesq4.32.wav",
+    "pesq": 4.3241071701049805,
+    "snr": 39.48286484234443
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_--6STvL0FXE.wav",
+    "wmd": "demo_outputs/AudioSet_--6STvL0FXE_wmd_snr38.92+pesq4.50.wav",
+    "pesq": 4.499892234802246,
+    "snr": 38.91835981433582
+}, {
+    "dataset": "AudioSet",
+    "origin": "demo_outputs/AudioSet_VtveMj9D-18.wav",
+    "wmd": "demo_outputs/AudioSet_VtveMj9D-18_wmd_snr39.53+pesq4.49.wav",
+    "pesq": 4.4868035316467285,
+    "snr": 39.52692887073985
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_042224.wav",
+    "wmd": "demo_outputs/FMA_042224_wmd_snr41.99+pesq4.27.wav",
+    "pesq": 4.271495819091797,
+    "snr": 41.98676109313965
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_104114.wav",
+    "wmd": "demo_outputs/FMA_104114_wmd_snr48.67+pesq4.50.wav",
+    "pesq": 4.499930381774902,
+    "snr": 48.67464542388916
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_105622.wav",
+    "wmd": "demo_outputs/FMA_105622_wmd_snr36.13+pesq4.49.wav",
+    "pesq": 4.494363784790039,
+    "snr": 36.12711191177368
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_009612.wav",
+    "wmd": "demo_outputs/FMA_009612_wmd_snr47.54+pesq4.28.wav",
+    "pesq": 4.279953479766846,
+    "snr": 47.535786628723145
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_032710.wav",
+    "wmd": "demo_outputs/FMA_032710_wmd_snr45.22+pesq4.50.wav",
+    "pesq": 4.499401569366455,
+    "snr": 45.215721130371094
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_039993.wav",
+    "wmd": "demo_outputs/FMA_039993_wmd_snr44.38+pesq4.48.wav",
+    "pesq": 4.48384952545166,
+    "snr": 44.375858306884766
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_019066.wav",
+    "wmd": "demo_outputs/FMA_019066_wmd_snr43.17+pesq4.50.wav",
+    "pesq": 4.499906539916992,
+    "snr": 43.16564083099365
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_022929.wav",
+    "wmd": "demo_outputs/FMA_022929_wmd_snr40.71+pesq4.46.wav",
+    "pesq": 4.464541912078857,
+    "snr": 40.70824146270752
+}, {
+    "dataset": "FMA",
+    "origin": "demo_outputs/FMA_151432.wav",
+    "wmd": "demo_outputs/FMA_151432_wmd_snr42.38+pesq4.49.wav",
+    "pesq": 4.490476131439209,
+    "snr": 42.378668785095215
+}]
