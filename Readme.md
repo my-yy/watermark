@@ -4,15 +4,15 @@
 
 ## Demo
 
-Our model encodes 32 bits information into a 1-second audio.
-
-In this demo， the first 16 bits are used as the pattern to determine the presence of the watermark（Probability for error detection：1/65535=0.0015%). The remaining 16 bits are used as the payload. 
+Our model encodes 32 bits of information into 1-second audio. In this demo，the first 16 bits are used as the pattern to determine the presence of the watermark（error detection probability：1/65535=0.0015%). The remaining 16 bits are used as the payload. 
 
 
 
-**add watermark**
+### add watermark
 
-`python 1_wavmark.py --input=<Host Audio Path> --output=<Output Path> --watermark=0010101010100111`
+```python
+python 1_wavmark.py --input=<Host Audio Path> --output=<Output Path> --watermark=0010101010100111
+```
 
 for example：
 
@@ -20,9 +20,7 @@ for example：
 
 
 
-**Tips:**
-
-The "--watermark"  value is a string of zeros and ones of length 16, and you can generate a random watermark string with the following code：
+**Tips:**  The "--watermark"  value is a string of zeros and ones of length 16, and you can generate a random watermark string with the following code：
 
 ```python
 import numpy as np
@@ -33,7 +31,7 @@ array_str = "".join([str(i) for i in array])
 
 
 
-**decode watermark**
+### decode watermark
 
 `python 1_wavmark.py --mode=extract --input=<Your Audio Path>`
 
