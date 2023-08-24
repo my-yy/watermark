@@ -61,106 +61,7 @@
 <body>
 
 <div id="app">
-    <div class="title_area">
-        <h1>
-            Who Composed This Sound? Watermarking for Audio Generation
-        </h1>
-        <div>
-            Author
-        </div>
-        <div>
-            Microsoft
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Framework Overview</h2>
-        <img class="img_structure" src="./imgs/structure.png">
-        <div style="text-align: left">
-            During the encoding phase, we iteratively embed a 1-second watermark section into the host audio, ensuring
-            the entire time domain protection.
-            Since the watermarked audio may be clipped,
-            in the decoding process, we need to determine the watermark position.
-            To address this issue, we made our model to be shift-invariant, allowing for a maximum misalignment of 0.1
-            seconds in the decoding position.
-            This characteristic enables us to efficiently apply a Brute Force Detection (BFD) strategy for decoding.
-            Specifically, the encoded message is composed of pattern bits and payload bits. When decoding, we utilize a
-            decoding window with a sliding step of 0.05 seconds to attempt decoding continuously.
-            Then, the correct watermark results are identified by checking with the predefined pattern bits.
-        </div>
-    </div>
-
-    <div class="card2">
-        <h2>Imperceptibility on Synthetic Data</h2>
-        <div class="table_wrapper">
-            <table>
-                <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Host Audio</th>
-                    <th>Watermarked Audio</th>
-                    <th>SNR</th>
-                    <th>PESQ</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="i in items2">
-                    <td>{{i.dataset}}</td>
-                    <td>
-                        <audio controls>
-                            <source :src="'data/'+i.origin" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source :src="'data/'+i.wmd" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>{{myToFixed(i.snr)}}</td>
-                    <td>{{myToFixed(i.pesq)}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
-    <div class="card2">
-        <h2>Imperceptibility on Real Data</h2>
-
-        <div class="table_wrapper">
-            <table>
-                <thead>
-                <tr>
-                    <th>Dataset</th>
-                    <th>Host Audio</th>
-                    <th>Watermarked Audio</th>
-                    <th>SNR</th>
-                    <th>PESQ</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="i in items">
-                    <td>{{i.dataset}}</td>
-                    <td>
-                        <audio controls>
-                            <source :src="'data/'+i.origin" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source :src="'data/'+i.wmd" type="audio/wav">
-                        </audio>
-                    </td>
-                    <td>{{myToFixed(i.snr)}}</td>
-                    <td>{{myToFixed(i.pesq)}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
+Page Moved to: <a href="https://wavmark.github.io/">https://wavmark.github.io/</a>
 </div>
 
 <script>
@@ -170,15 +71,10 @@
             items: data_list,
             items2: datalist2,
         },
+        mounted(){
+            window.location.href = "https://wavmark.github.io/";
+        },
         methods: {
-            myToFixed(v) {
-                try {
-                    return v.toFixed(2)
-                } catch (e) {
-                    return v
-                }
-            }
-
         }
     })
 </script>
